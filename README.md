@@ -32,9 +32,9 @@ My deployed app here: [DreamEstate app](https://boiling-bastion-78431.herokuapp.
 
 Here's how I plan to model my app's data and relationships, or ERD (Entity Relationship Diagrams).
 
-Figma graphic ERD:
+Figma diagram:
 
-[Figma image](z_dream-estate_ERD-1.png "Figma image")
+![Figma image](z_dream-estate_ERD-1.png "Figma image")
 
 Example code with nested objects:
 
