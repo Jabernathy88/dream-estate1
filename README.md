@@ -90,7 +90,7 @@ Sorry -- I will upload a more professional-looking wireframe soon.
 
 Views and routes sketch:
 
-![Hand-drawn image](z_dream-estate_WIREFRAME-1 "hand-drawn image")
+![Hand-drawn image](z_dream-estate_WIREFRAME-1.png "hand-drawn image")
 
 ## Link to Trello
 
