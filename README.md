@@ -8,7 +8,7 @@ Started: 01-03-18, Re-started: 01-04-18, **Due:** Monday 01-08-18
 
 Needed before I start:
 
-1. Deploy to Heroku **note: started having issues 2:30pm Thurs**
+1. Deploy to Heroku **-- Note: started having issues 2:30pm Thurs**
 2. ERD with 3 data models
 3. Restful route for 1 model: GET, POST, PUT, and DELETE
 4. Mongoose installed and database created, connected 
@@ -20,13 +20,13 @@ Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/at
 
 ## Project Description & Goals
 
-Now this project is called DreamEstate Tycoon. 
+Now this project is called DreamEstate Tycoon. Basically you create a user (full CRUD), choose some land you want (or several lots of land), and choose what kind of home you want to build (or many homes). It will be whimsical, somewhat cartoon-ish, but clever. And possibly, it could later evolve into a more realistic real-estate simulator.
 
 ## Link to Heroku
 
 My deployed app here: [DreamEstate app](https://boiling-bastion-78431.herokuapp.com/). 
 
-**Note:** Heroku reported down around 2:30pm Thurs.
+**-- Note:** Heroku reported down around 2:30pm Thurs.
 
 ## ERDs
 
