@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI); 
 
-
 var index = require('./routes/index');
 var users = require('./routes/users');
 
@@ -25,6 +24,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
 
 app.use('/', index);
 app.use('/users', users);
@@ -46,5 +47,34 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// Mongo connection set-up
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.MONGODB_URI, {
+  useMongoClient: true
+})
+
+mongoose.connection.once('open', () => {
+  console.log('Mongoose has connected to MongoDB!')
+})
+
+mongoose.connection.on('error', (error) => {
+  console.error(`
+    MongoDB connection error!!! 
+    ${error}
+  `)
+  process.exit(-1)
+})
+
+// Automatically redirect to the Users page on load
+app.get('/', (request, response) => {
+  response.redirect('/users')
+})
+
+// Starting server
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+  console.log(`Express app listening on port ${PORT}`)
+})
 
 module.exports = app;
