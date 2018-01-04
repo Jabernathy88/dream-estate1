@@ -10,9 +10,9 @@ Needed before I start:
 
 1. Deploy to Heroku 
 **-- Note: started having issues 2:30pm Thurs**
-2. ERD with 3 data models _done
-3. Restful route for 1 model: GET, POST, PUT, and DELETE _done
-4. Mongoose installed and database created, connected _done
+2. ERD with 3 data models __done
+3. Restful route for 1 model: GET, POST, PUT, and DELETE __done
+4. Mongoose installed and database created, connected __done
 5. Wireframes 
 6. Trello board with User Stories 
 
@@ -20,7 +20,7 @@ Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/at
 
 ## Project Description & Goals
 
-Now this project is called DreamEstate Tycoon. Basically you create a user (full CRUD), choose some land you want (or several lots of land), and choose what kind of home you want to build (or many homes). It will be whimsical, somewhat cartoon-ish, but clever. And possibly, it could later evolve into a more realistic real-estate simulator.
+Now this project is called DreamEstate Tycoon. Basically you create a user, choose some land you want (or several lots of land), and choose what kind of home you want to build (or many homes). It will be somewhat cartoon-ish, but clever. And possibly, it could later evolve into a more realistic real-estate simulator.
 
 ## Link to Heroku
 
@@ -84,10 +84,13 @@ exampleUsers: [
 ]
 ```
 
-
 ## Wireframes
 
-image
+Sorry -- I will upload a more professional-looking wireframe soon.
+
+Views and routes sketch:
+
+[Hand-drawn image](z_dream-estate_WIREFRAME-1 "hand-drawn image")
 
 ## Link to Trello
 
