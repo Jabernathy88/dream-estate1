@@ -34,7 +34,7 @@ Here's how I plan to model my app's data and relationships, or ERD (Entity Relat
 
 Figma graphic ERD:
 
-[Figma image](./z_dream-estate_ERD-1.png)
+[Figma image](z_dream-estate_ERD-1.png "Figma image")
 
 Example code with nested objects:
 
