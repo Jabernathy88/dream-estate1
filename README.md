@@ -8,13 +8,13 @@ Started: 01-03-18, Re-started: 01-04-18, **Due:** Monday 01-08-18
 
 Needed before I start:
 
-1. Deploy to Heroku **-- Note: started having issues 2:30pm Thurs**
-2. ERD with 3 data models
-3. Restful route for 1 model: GET, POST, PUT, and DELETE
-4. Mongoose installed and database created, connected 
-5. Wireframes
+1. Deploy to Heroku 
+**-- Note: started having issues 2:30pm Thurs**
+2. ERD with 3 data models _done
+3. Restful route for 1 model: GET, POST, PUT, and DELETE _done
+4. Mongoose installed and database created, connected _done
+5. Wireframes 
 6. Trello board with User Stories 
-7. Readme file complete on GitHub 
 
 Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/projects/unit_02).
 
@@ -30,7 +30,7 @@ My deployed app here: [DreamEstate app](https://boiling-bastion-78431.herokuapp.
 
 ## ERDs
 
-Here's how I plan to model my app's data and relationships, or ERD (Entity Relationship Diagrams).
+Here's how I plan to model my app's data and relationships, or ERD (Entity Relationship Diagrams). Note that the Users page will have restful routes for full CRUD. 
 
 Figma diagram:
 
