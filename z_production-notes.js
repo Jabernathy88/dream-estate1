@@ -1,5 +1,7 @@
 // PRODUCTION NOTES
 
+// character limit?
+// Seren Alami Varghese is a little too long. 
 
 /*
 // css you might need later

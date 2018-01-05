@@ -10,7 +10,18 @@
 </div>
 
 <div class="index-view scroll-content">
-  <a href="/users/show">
+  {{#each users}}
+  <a href="/users/{{this._id}}">
+    <div class="listen">
+      <p>{{this.name}}'s page!</p>
+    </div>
+  </a>
+  {{/each}}
+
+</div>
+
+
+<!-- OLD SCROLL  <a href="/users/show">
     <div class="listen">
       <p>Click to see Suzy (user1).</p>
     </div>
@@ -20,5 +31,6 @@
   </div>
   <div>
     <p>User3</p>
-  </div>
-</div>
+  </div> -->
+
+<!-- EXAMPLE SCROLL

@@ -5,36 +5,40 @@ const User = require('../models/user')
 
 User.remove()
 .then(
-    console.log('users were removed')
+    console.log('All users removed.')
 ).catch(err=>{
     console.log(err)
 })
 
-
-const ayana = new User({
-    name: 'Ayana'
+const suzyUser = new User({
+    name: 'Suzy',
+    favColor: 'lavender'
 })
 
-const olee = new User({
-    name: 'Olee'
-})
-const kristin = new User({
-    name: 'kristin'
+const joshUser = new User({
+  name: 'Josh Therrien',
+  favColor: 'green'
 })
 
-ayana.save()
+const serenUser = new User({
+  name: 'Seren Alami Varghese',
+  favColor: 'magenta'
+})
+
+suzyUser.save()
 .then(user=>{
-    console.log (`${user.name} is in the database`)
-    return olee.save()
+    console.log (`${user.name} saved to database.`)
+    return suzyUser.save()
 })
 .then(user=>{
-    console.log (`${user.name} is in the database`)
-    return kristin.save()
+  console.log (`${user.name} saved to database.`)
+  return joshUser.save()
 })
 .then(user=>{
-    console.log (`${user.name} is in the database`)
+  console.log (`${user.name} saved to database.`)
+  return serenUser.save()
 })
 .catch(err=>{
-    console.log('sorry, there was an error')
+    console.log('Sorry - error saving User seeds.')
     console.log(err)
 })
