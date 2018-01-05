@@ -8,13 +8,12 @@ Started: 01-03-18, Re-started: 01-04-18, **Due:** Monday 01-08-18
 
 Needed before I start:
 
-1. Deploy to Heroku 
-**-- Note: started having issues 2:30pm Thurs**
+1. Deploy to Heroku _done
 2. ERD with 3 data models __done
 3. Restful route for 1 model: GET, POST, PUT, and DELETE __done
 4. Mongoose installed and database created, connected __done
 5. Wireframes __done
-6. Trello board with User Stories __done!
+6. Trello board with User Stories __done
 
 Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/projects/unit_02).
 
@@ -24,7 +23,7 @@ Now this project is called DreamEstate Tycoon. Basically you create a user, choo
 
 ## Link to Heroku
 
-My deployed app here: [DreamEstate app](https://boiling-bastion-78431.herokuapp.com/). 
+My deployed app here: [DreamEstate app](https://arcane-caverns-60948.herokuapp.com/). 
 
 **-- Note:** Heroku reported down around 2:30pm Thurs.
 

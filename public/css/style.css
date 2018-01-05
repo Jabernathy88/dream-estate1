@@ -1,3 +1,4 @@
+/* */
 body {
   padding: 4px;
   font: 16px 'Cousine', 'Roboto', 'Open Sans', monospace;
@@ -8,8 +9,12 @@ div.page-content, div.header-content {
   background: darkgray;
 }
 
+div.title-content, div.dashboard-content, div.scroll-content {
+  background: lightgreen;
+} /* will divide these up later */
+
 div {
   padding: 4px;
   margin: 4px;
   background: papayawhip;
-}
+} /* specific divs first, then this one */
