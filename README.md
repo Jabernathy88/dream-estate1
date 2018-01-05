@@ -71,7 +71,7 @@ const exampleUsers = [
             hasBigFrontYard: false
           },
           {
-            name: "Secret Witcraft Den",
+            name: "Secret Witchcraft Den",
             type: "log cabin",
             color: 'lavender',
             hasGarage: false,
