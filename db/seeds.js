@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-/* mongoose.connect(process.env.MONGODB_URI, {
+ mongoose.connect(process.env.MONGODB_URI, {
   useMongoClient: true
-}) */ // comment this out if running seeds local
+})  // turn on if running seeds on Heroku
 
-mongoose.connect('mongodb://localhost/dreams_db') // comment out if Heroku
+/* mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local */
 
 const User = require('./models/User')
 
@@ -42,7 +42,6 @@ suzyUser.save()
 .then(user=>{
   console.log (`${user.name} saved to database.`)
   return serenUser.save()
-  mongoose.connection.close()
 })
 .catch(err=>{
     console.log('Sorry - error saving User seeds.')
