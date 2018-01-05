@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/dreams_db')
 
-const User = require('/models/user')
+const User = require('models/User')
 
 User.remove()
 .then(
