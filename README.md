@@ -13,8 +13,8 @@ Needed before I start:
 2. ERD with 3 data models __done
 3. Restful route for 1 model: GET, POST, PUT, and DELETE __done
 4. Mongoose installed and database created, connected __done
-5. Wireframes 
-6. Trello board with User Stories 
+5. Wireframes __done
+6. Trello board with User Stories __done soon
 
 Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/projects/unit_02).
 
