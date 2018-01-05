@@ -39,7 +39,7 @@ Figma diagram:
 Example code with nested objects:
 
 ```
-exampleUsers: [
+const exampleUsers = [
   {
     name: 'Suzy', // example with two landLots and threee homes
     favColor: 'lavender',
@@ -73,7 +73,7 @@ exampleUsers: [
           {
             name: "Secret Witcraft Den",
             type: "log cabin",
-            color: 'lavender'
+            color: 'lavender',
             hasGarage: false,
             hasBigFrontYard: false
           }
@@ -82,6 +82,7 @@ exampleUsers: [
     ]
   }
 ]
+console.log(exampleUsers)
 ```
 
 ## Wireframes
