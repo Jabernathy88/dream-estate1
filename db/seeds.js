@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/dreams_db')
+mongoose.connect(process.env.MONGODB_URI, {
+  useMongoClient: true
+})
 
 const User = require('./models/User')
 
