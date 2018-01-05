@@ -14,7 +14,7 @@ Needed before I start:
 3. Restful route for 1 model: GET, POST, PUT, and DELETE __done
 4. Mongoose installed and database created, connected __done
 5. Wireframes __done
-6. Trello board with User Stories __done soon
+6. Trello board with User Stories __done!
 
 Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/projects/unit_02).
 
@@ -93,9 +93,9 @@ Views and routes sketch:
 
 ![Hand-drawn image](z_dream-estate_WIREFRAME-1.png "hand-drawn image")
 
-## Link to Trello
+## User Stories
 
-link 
+Link to my Trello board here: [Project 2 Planning](https://trello.com/b/lb8Tv2XL/dream-estate1-project-2). Still updating!
 
 ## Reach/Icebox
 
