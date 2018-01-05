@@ -18,3 +18,7 @@ div {
   margin: 4px;
   background: papayawhip;
 } /* specific divs first, then this one */
+
+.listen:hover, .listen:active {
+  background: lightcoral;
+} /* highlights anything click-able, on hover */

@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router()
 
 // GET users, Idex Users 
 router.get('/', function(req, res, next) {
@@ -7,6 +7,9 @@ router.get('/', function(req, res, next) {
 })
 
 // 2. POST, Create User
+router.get('/new', (request, response) => {
+  response.render('users/new', {/*pageTitle: 'New User'*/})
+})
 
 // PUT
 
@@ -14,6 +17,10 @@ router.get('/', function(req, res, next) {
 
 
 // 3. Show Single User
+router.get('/show', (request, response) => {
+  response.render('users/show', {})
+})
+
 
 // 4. 
 

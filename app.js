@@ -39,6 +39,9 @@ mongoose.connection.on('error', (error) => {
 const users = require('./routes/users')
 app.use('/users', users)
 
+const landsController = require('./routes/landsController')
+app.use('/users/lands/', landsController) // need to add :wild back
+
 // my other controllers go here
 
 // Automatically redirect to the Users page on load
