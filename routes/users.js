@@ -18,13 +18,22 @@ router.get('/', (request, response) => {
 // POST, Create User
 router.get('/new', (request, response) => {
   response.render('users/new', {/*pageTitle: 'New User'*/})
-}) // need more steps
-/*
+}) 
+
 router.post('/', (request, response) => {
   const newUser = request.body
-  if(!newUser.photoUrl) {
-    newUser.photoUrl = 'http://www.fillmurray.com/g/300/300'
-  } */
+  
+  User.create(newUser)
+    .then(() => {
+      response.redirect('/users')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+
+
 
 // PUT, Edit User
 router.get('/edit', (request, response) => {
@@ -45,8 +54,18 @@ router.get('/delete', (request, response) => { // add :wild back in
 })
 
 // 3. Show Single User
-router.get('/show', (request, response) => {
-  response.render('users/show', {})
+router.get('/:userId', (request, response) => {
+  const userId = request.params.userId
+  User.findById(userId)
+  .then((user) => {
+    response.render('users/show', {
+      user,
+      pageTitle: user.name // implement this later
+    })
+  })
+  .catch((error) => {
+    console.log(error)
+  })
 })
 
 module.exports = router
