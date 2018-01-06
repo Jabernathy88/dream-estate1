@@ -1,11 +1,14 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const UserSchema = new Schema(
+const HomesSchema = new Schema(
   {
     name: { type: String, required: true },
-    favColor: { type: String, required: false },
-    landLots: [LandsSchema]
+    type: { type: String, required: false },
+    color: { type: String, required: false },
+    hasGarage: { type: Boolean, required: false },
+    hasBigFrontYard: { type: Boolean, required: false },
+    purchased: { type: Boolean, required: false }
   },
   {
     timestamps: {},
@@ -26,14 +29,11 @@ const LandsSchema = new Schema(
   }
 )
 
-const HomesSchema = new Schema(
+const UserSchema = new Schema(
   {
     name: { type: String, required: true },
-    type: { type: String, required: false },
-    color: { type: String, required: false },
-    hasGarage: { type: Boolean, required: false },
-    hasBigFrontYard: { type: Boolean, required: false },
-    purchased: { type: Boolean, required: false }
+    favColor: { type: String, required: false },
+    landLots: [LandsSchema]
   },
   {
     timestamps: {},
