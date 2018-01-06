@@ -1,3 +1,8 @@
+require('dotenv').config()
+const User = require('./models/User')
+const Land = require('./models/Land')
+const Home = require('./models/Home')
+
 const mongoose = require('mongoose')
 
 // mongoose.connect(process.env.MONGODB_URI, {
@@ -6,7 +11,17 @@ const mongoose = require('mongoose')
 
 mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local 
 
-const User = require('./models/User')
+mongoose.connection.once('open', () => {
+  console.log(`Mongoose has connected to MongoDB`)
+})
+
+mongoose.connection.on('error', (error) => {
+  console.error(`
+    MongoDB connection error!!! 
+    ${error}
+  `)
+  process.exit(-1)
+})
 
 User.remove()
 .then(
