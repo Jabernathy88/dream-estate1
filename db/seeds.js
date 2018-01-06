@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 //  useMongoClient: true
 //})  // turn on if running seeds on Heroku
 
- mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local 
+mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local 
 
 const User = require('./models/User')
 
@@ -30,6 +30,16 @@ const serenUser = new User({
   favColor: 'magenta'
 })
 
+const kanyeUser = new User({
+  name: 'Kanye the Giant',
+  favColor: 'cucumber'
+})
+
+const sammyUser = new User({
+  name: 'Sammy the Cat',
+  favColor: 'pink'
+})
+
 suzyUser.save()
 .then(user=>{
     console.log (`${user.name} saved to database.`)
@@ -42,6 +52,14 @@ suzyUser.save()
 .then(user=>{
   console.log (`${user.name} saved to database.`)
   return serenUser.save()
+})
+.then(user=>{
+  console.log (`${user.name} saved to database.`)
+  return kanyeUser.save()
+})
+.then(user=>{
+  console.log (`${user.name} saved to database.`)
+  return sammyUser.save()
 })
 .catch(err=>{
     console.log('Sorry - error saving User seeds.')

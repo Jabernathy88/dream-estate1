@@ -75,19 +75,17 @@ router.put('/:userId', (request, response) => {
     })
 })
 
-/* delete route function
-router.get('/delete', (request, response) => { // add :wild back in
-//  const userId = request.params.userId
+// delete route
+router.get('/:userId/delete', (request, response) => {
+  const userId = request.params.userId
 
-//  User.findByIdAndRemove(userId)
-//    .then(() => {
+  User.findByIdAndRemove(userId)
+    .then(() => {
       response.redirect('/users')
-//    })
-//    .catch((error) => {
-//      console.log(error)
-//    })
-})*/
-
-
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
 module.exports = router

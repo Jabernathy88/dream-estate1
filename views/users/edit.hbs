@@ -16,9 +16,9 @@
     </div>
   </form>
 
-  <a href="/users/delete">
+  <a href="/users/{{user._id}}/delete">
     <div class="listen">
-      <p>Click to delete Suzy.</p>
+      <p>Delete {{user.name}}?</p>
     </div>
   </a>
   <a href="/users/{{user._id}}">
