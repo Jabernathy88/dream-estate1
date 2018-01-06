@@ -7,7 +7,8 @@ const app = express()
 
 app.set('view engine', 'hbs')
 
-app.use(express.static('public'))
+const path = require('path')
+app.use(express.static(path.join(__dirname, 'public')))
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({
@@ -16,6 +17,9 @@ app.use(bodyParser.urlencoded({
 
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
+
+const favicon = require('serve-favicon') // doesn't appear to work?
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 // Mongo connection set-up
 mongoose.Promise = global.Promise
