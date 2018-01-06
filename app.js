@@ -53,10 +53,4 @@ app.get('/', (request, response) => {
   response.redirect('/users')
 })
 
-// Starting server
-//const PORT = process.env.PORT || 3000
-//app.listen(PORT, () => {
-//  console.log(`Express app listening on port ${PORT}`)
-//})
-
 module.exports = app 

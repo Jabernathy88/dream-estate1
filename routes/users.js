@@ -2,12 +2,13 @@ const express = require('express')
 const router = express.Router()
 const User = require('../db/models/User')
 
+// show index view
 router.get('/', (request, response) => {
   User.find({})
     .then((users) => {
       response.render('users/index', {
         users,
-//        pageTitle: 'Banana'
+        //        pageTitle: 'Banana'
       })
     })
     .catch((error) => {
@@ -15,14 +16,14 @@ router.get('/', (request, response) => {
     })
 })
 
-// POST, Create User
+// create user
 router.get('/new', (request, response) => {
-  response.render('users/new', {/*pageTitle: 'New User'*/})
-}) 
+  response.render('users/new', {/*pageTitle: 'New User'*/ })
+})
 
 router.post('/', (request, response) => {
   const newUser = request.body
-  
+
   User.create(newUser)
     .then(() => {
       response.redirect('/users')
@@ -32,15 +33,49 @@ router.post('/', (request, response) => {
     })
 })
 
-// starting over here
+// show :wild single user
+router.get('/:userId', (request, response) => {
+  const userId = request.params.userId
+  User.findById(userId)
+    .then((user) => {
+      response.render('users/show', {
+        user,
+        pageTitle: user.name // implement this later
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
+// show :wild/edit user page
+router.get('/:userId/edit', (request, response) => {
+  const userId = request.params.userId
+  User.findById(userId)
+    .then((user) => {
+      response.render('users/edit', {
+        user,
+        pageTitle: 'Profile_Update' // later
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
-// PUT, Edit User
-router.get('/edit', (request, response) => {
-  response.render('users/edit', {/*pageTitle: 'New User'*/})
-}) // need more steps
+router.put('/:userId', (request, response) => {
+  const userId = request.params.userId
+  const updatedUserInfo = request.body
+  User.findByIdAndUpdate(userId, updatedUserInfo, { new: true })
+    .then(() => {
+      response.redirect(`/users/${userId}`)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
 
-// DELETE
+/* delete route function
 router.get('/delete', (request, response) => { // add :wild back in
 //  const userId = request.params.userId
 
@@ -51,21 +86,8 @@ router.get('/delete', (request, response) => { // add :wild back in
 //    .catch((error) => {
 //      console.log(error)
 //    })
-})
+})*/
 
-// 3. Show Single User
-router.get('/:userId', (request, response) => {
-  const userId = request.params.userId
-  User.findById(userId)
-  .then((user) => {
-    response.render('users/show', {
-      user,
-      pageTitle: user.name // implement this later
-    })
-  })
-  .catch((error) => {
-    console.log(error)
-  })
-})
+
 
 module.exports = router

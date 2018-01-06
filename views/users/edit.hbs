@@ -1,17 +1,27 @@
 <!--note: this page both Edits && Deletes -->
 <div class="index-view dashboard-content">
   <div>
-    <p>4. This is Edit/Delete Suzy Page.</p>
+    <p>4. Edit/Delete {{user.name}}.</p>
   </div>
-  <div class="listen">
-    <p>What's Suzy's new favColor?</p>
-  </div>
+
+  <form action="/users/{{user._id}}?_method=PUT" method="POST">
+    <div class="listen">
+      <label for="name">Change my name?</label>
+      <p>
+        <input type="text" name="name" value="{{user.name}}" required />
+      </p>
+    </div>
+    <div class="listen">
+      <p>Change my favColor?</p>
+    </div>
+  </form>
+
   <a href="/users/delete">
     <div class="listen">
       <p>Click to delete Suzy.</p>
     </div>
   </a>
-  <a href="/users/show">
+  <a href="/users/{{user._id}}">
     <div class="listen">
       <p>Go back to Suzy's page.</p>
     </div>

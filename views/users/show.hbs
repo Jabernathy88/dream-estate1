@@ -2,14 +2,14 @@
 <div>
   <p>3. This is {{user.name}}'s page.</p>
 </div>
-  <a href="/users/edit">
+  <a href="/users/{{user._id}}/edit">
     <div class="listen">
-      <p>Click to Edit or Delete Suzy.</p>
+      <p>Edit or Delete {{user.name}}.</p>
     </div>
   </a>
     <a href="/">
     <div class="listen">
-      <p>Go back to Index.</p>
+      <p>Back to Index.</p>
     </div>
   </a>
 </div>
