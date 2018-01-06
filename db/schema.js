@@ -42,7 +42,7 @@ const UserSchema = new Schema(
 )
 
 module.exports = {
-  UserSchema,
+  HomesSchema,
   LandsSchema,
-  HomesSchema
+  UserSchema
 }
