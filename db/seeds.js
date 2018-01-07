@@ -30,8 +30,8 @@ User.remove({}).then(() => {
     favColor: 'lavender'
   })
   const landOne = new Land({
-    name: "Lot B001",
-    location: "Blue Ridge, Georgia",
+    name: "Lot A001",
+    location: "Midtown Atlanta",
     type: "urban",
     purchased: true
   })
@@ -79,13 +79,14 @@ User.remove({}).then(() => {
   return suzyUser.save()
 
   // 2. josh
-}).then((user) => {
+}).then(() => {
   return User.create({
     name: 'Josh Therrien',
     favColor: 'green'
   })
+}).then((user) => {
   const landOne = new Land({
-    name: "Lot A001",
+    name: "Lot A002",
     location: "Midtown Atlanta",
     type: "urban",
     purchased: true
@@ -100,19 +101,19 @@ User.remove({}).then(() => {
   })
   landOne.homes.push(homeOne)
   user.landLots.push(landOne)
-}).then((user) => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 
   // 3. Sammy the Cat
 
-}).then((user) => {
+}).then(() => {
   return User.create({
     name: 'Sammy the Cat',
     favColor: 'blue'
   })
+}).then((user) => {
   const landOne = new Land({
-    name: "Lot B009",
+    name: "Lot B003",
     location: "Blue Ridge, Georgia",
     type: "mountains",
     purchased: true
@@ -126,7 +127,7 @@ User.remove({}).then(() => {
     purchased: true
   })
   const landTwo = new Land({
-    name: "Lot A009",
+    name: "Lot A003",
     location: "Midtown Atlanta",
     type: "urban",
     purchased: true
@@ -140,7 +141,7 @@ User.remove({}).then(() => {
     purchased: true
   })
   const landThree = new Land({
-    name: "Lot F009",
+    name: "Lot F003",
     location: "Glengarry, Florida",
     type: "swamp",
     purchased: true
@@ -156,22 +157,20 @@ User.remove({}).then(() => {
   landOne.homes.push(homeOne)
   landTwo.homes.push(homeTwo)
   landThree.homes.push(homeThree)
-  user.landLots.push(landOne)
-  user.landLots.push(landTwo)
-  user.landLots.push(landThree)
-}).then((user) => {
+  user.landLots.push(landOne, landTwo, landThree)
   console.log(`${user.name} saved to database.`)
   return user.save()
 
-// 4. Kanye the Giant
+  // 4. Kanye the Giant
 
-}).then((user) => {
+}).then(() => {
   return User.create({
     name: 'Kanye the Giant',
     favColor: 'blue'
   })
+}).then((user) => {
   const landOne = new Land({
-    name: "Lot A002",
+    name: "Lot A004",
     location: "Midtown Atlanta",
     type: "urban",
     purchased: true
@@ -186,19 +185,19 @@ User.remove({}).then(() => {
   })
   landOne.homes.push(homeOne)
   user.landLots.push(landOne)
-}).then((user) => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 
   // 5. Eric Liu, OG
 
-}).then((user) => {
+}).then(() => {
   return User.create({
     name: 'Eric Liu, Original Gangsta',
     favColor: 'cyan'
   })
+}).then((user) => {
   const landOne = new Land({
-    name: "Lot A003",
+    name: "Lot A005",
     location: "Midtown Atlanta",
     type: "urban",
     purchased: true
@@ -213,19 +212,19 @@ User.remove({}).then(() => {
   })
   landOne.homes.push(homeOne)
   user.landLots.push(landOne)
-}).then((user) => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 
   // 6. O'Lee, Architect
 
-}).then((user) => {
+}).then(() => {
   return User.create({
     name: "O'Lee",
     favColor: 'purple'
   })
+}).then((user) => {
   const landOne = new Land({
-    name: "Lot B004",
+    name: "Lot B006",
     location: "Blue Ridge, Georgia",
     type: "mountains",
     purchased: true
@@ -240,19 +239,19 @@ User.remove({}).then(() => {
   })
   landOne.homes.push(homeOne)
   user.landLots.push(landOne)
-}).then((user) => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 
-// 7. Jack Black
+  // 7. Jack Black
 
-}).then((user) => {
+}).then(() => {
   return User.create({
     name: "Jack Black",
     favColor: 'black'
   })
+}).then((user) => {
   const landOne = new Land({
-    name: "Lot F005",
+    name: "Lot F007",
     location: "Glengarry, Florida",
     type: "swamp",
     purchased: true
@@ -267,19 +266,19 @@ User.remove({}).then(() => {
   })
   landOne.homes.push(homeOne)
   user.landLots.push(landOne)
-}).then((user) => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 
-// Jack Red
+  // 8. Jack Red
 
-}).then((user) => {
+}).then(() => {
   return User.create({
     name: "Jack Red",
     favColor: 'red'
   })
+}).then((user) => {
   const landOne = new Land({
-    name: "Lot F006",
+    name: "Lot F008",
     location: "Glengarry, Florida",
     type: "swamp",
     purchased: true
@@ -294,7 +293,6 @@ User.remove({}).then(() => {
   })
   landOne.homes.push(homeOne)
   user.landLots.push(landOne)
-}).then((user) => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 

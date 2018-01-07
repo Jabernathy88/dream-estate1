@@ -3,13 +3,11 @@ body {
   padding: 4px;
   margin: 2px;
   font: 16px 'Cousine', 'Roboto', 'Open Sans', monospace;
-  background: lightgray;
 }
 
 .title-content {
   text-align: center;
 }
-
 
 .title-content, .scroll-content {
   background: lightgreen;

@@ -1,6 +1,7 @@
 const express = require('express')
-const router = express.Router()
+const router = express.Router({mergeParams: true})
 const User = require('../db/models/User')
+const Land = require('../db/models/Land')
 const siteTitle = require('../title')
 
 // show index view
@@ -43,6 +44,8 @@ router.get('/:userId', (request, response) => {
     .then((user) => {
       response.render('users/show', {
         user,
+        userId: user._id,
+        lands: user.landLots, 
         siteTitle,
         pageTitle: user.name // implement this later
       })

@@ -1,29 +1,23 @@
 <div class="user-view dashboard-content">
-<div>
-  <p>3. This is {{user.name}}'s page.</p>
-</div>
+  
+    <p>3. This is {{user.name}}'s page.</p>
+
   <a href="/users/{{user._id}}/edit">
     <div class="listen">
       <p>Edit or Delete {{user.name}}.</p>
     </div>
   </a>
-    <a href="/">
+  <a href="/">
     <div class="listen">
       <p>Back to Index.</p>
     </div>
   </a>
 </div>
-
-<div class="index-view scroll-content">
-    <a href="/users/lands">
-      <div class="listen">
-        <p>Click to see landLot A34</p>
-      </div>
-    </a>
-  <div>
-    <p>landLot F26</p>
-  </div>
-  <div>
-    <p>landLot 3</p>
-  </div>
+<div class="user-view scroll-content">
+    <p>Lots owned by {{user.name}}:</p>
+  {{#each lands}}
+    <div class="listen">
+      <p>Click for {{this.name}}</p>
+    </div>
+  {{/each}}
 </div>
