@@ -242,60 +242,6 @@ User.remove({}).then(() => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 
-  // 7. Jack Black
-
-}).then(() => {
-  return User.create({
-    name: "Jack Black",
-    favColor: 'black'
-  })
-}).then((user) => {
-  const landOne = new Land({
-    name: "Lot F007",
-    location: "Glengarry, Florida",
-    type: "swamp",
-    purchased: true
-  })
-  const homeOne = new Home({
-    name: "Jack Black's Shack",
-    type: "log cabin",
-    color: "black",
-    hasGarage: false,
-    hasBigFrontYard: false,
-    purchased: true
-  })
-  landOne.homes.push(homeOne)
-  user.landLots.push(landOne)
-  console.log(`${user.name} saved to database.`)
-  return user.save()
-
-  // 8. Jack Red
-
-}).then(() => {
-  return User.create({
-    name: "Jack Red",
-    favColor: 'red'
-  })
-}).then((user) => {
-  const landOne = new Land({
-    name: "Lot F008",
-    location: "Glengarry, Florida",
-    type: "swamp",
-    purchased: true
-  })
-  const homeOne = new Home({
-    name: `${user.name}'s Shack`,
-    type: "log cabin",
-    color: "red",
-    hasGarage: false,
-    hasBigFrontYard: false,
-    purchased: true
-  })
-  landOne.homes.push(homeOne)
-  user.landLots.push(landOne)
-  console.log(`${user.name} saved to database.`)
-  return user.save()
-
 }).catch((error) => {
   console.log('!!!!! ERROR SAVING SEEDED DATA !!!!!')
   console.log(error)

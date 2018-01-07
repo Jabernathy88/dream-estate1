@@ -26,9 +26,9 @@ body {
   height: 70px;
 }
 
-.game-world {
-  width: 60px;
-  height: 60px;
+.sim-content {
+  width: 80px;
+  height: 80px;
   border: 2px dashed lightgray;
   display: flex;
   align-self: center;
@@ -36,8 +36,9 @@ body {
   align-items: center;
 }
 
-.create-new-view {
-  text-align: center;
+.sim-placeholder {
+  width: 40%;
+  height: 40%;
 }
 
 input {
