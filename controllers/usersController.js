@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router({mergeParams: true})
 const User = require('../db/models/User')
 const Land = require('../db/models/Land')
+const Home = require('../db/models/Home')
 const siteTitle = require('../title')
 
 // show index view

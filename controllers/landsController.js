@@ -14,6 +14,7 @@ router.get('/:landId', (request, response) => {
       response.render('lands/show', {
         user,
         userId,
+        land,
         pageTitle: 'land'
       })
     })

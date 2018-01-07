@@ -1,19 +1,23 @@
 <div class="index-view dashboard-content">
-  <div>
-    <p>1. This is Index Users page.</p>
+
+  <div class="game-world">
+    <img src="favicon.ico" />
   </div>
+  <p>Welcome! Would you like to ...</p>
   <a href="/users/new">
     <div class="listen">
-      <p>Create a new user.</p>
+      <h3>Create New User ?</h3>
     </div>
   </a>
 </div>
 
 <div class="index-view scroll-content">
+  <p>... or choose a current user:</p>
+
   {{#each users}}
   <a href="/users/{{this._id}}">
     <div class="listen">
-      <p>{{this.name}}'s page!</p>
+      <p>{{this.name}} | <span class="caption-details">owns {{this.landLots.length}} homes on {{this.landLots.length}} lots</span></p>
     </div>
   </a>
   {{/each}}

@@ -1,29 +1,64 @@
 /* */
 body {
   padding: 4px;
-  margin: 2px;
-  font: 16px 'Cousine', 'Roboto', 'Open Sans', monospace;
+  font-size: 15px; 
+  font-family: 'Encode Sans Expanded', 'Helvetica', 'Arial', sans-serif;
+  background: cyan;
 }
 
-.title-content {
+h1 {
+  font-size: 28px; 
+}
+
+h1, h2, h3, h4, h5 {  
+  font-family: 'Merienda', 'Helvetica', 'Arial', sans-serif;
   text-align: center;
+  font-weight: 900;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.caption-details {
+  font-variant: small-caps;
 }
 
 .title-content, .scroll-content {
   background: lightgreen;
 } 
 
+.game-world {
+  width: 35px;
+  height: 35px;
+  border: 2px dashed lightgray;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .dashboard-content {
+  margin: 8px;
+  padding: 6px;
+  height: 30vh;
   background: cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 } 
 
+.listen {
+  background: azure;
+}
+
 div {
-  padding: 2px;
+  padding: 2px 4px;
   margin: 2px;
-  background: white;
-  border: 1px solid black; 
+  border-radius: 8px; 
 } /* specific divs first, then this one */
 
 .listen:hover, .listen:active {
-  background: lightcoral;
+  background: lavenderblush;
 } /* highlights anything click-able, on hover */
