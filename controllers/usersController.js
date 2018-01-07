@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../db/models/User')
+const siteTitle = require('../title')
 
 // show index view
 router.get('/', (request, response) => {
@@ -8,7 +9,7 @@ router.get('/', (request, response) => {
     .then((users) => {
       response.render('users/index', {
         users,
-        //        pageTitle: 'Banana'
+        siteTitle
       })
     })
     .catch((error) => {
@@ -18,7 +19,9 @@ router.get('/', (request, response) => {
 
 // create user
 router.get('/new', (request, response) => {
-  response.render('users/new', {/*pageTitle: 'New User'*/ })
+  response.render('users/new', {
+    siteTitle
+  })
 })
 
 router.post('/', (request, response) => {
@@ -40,6 +43,7 @@ router.get('/:userId', (request, response) => {
     .then((user) => {
       response.render('users/show', {
         user,
+        siteTitle,
         pageTitle: user.name // implement this later
       })
     })
@@ -55,6 +59,7 @@ router.get('/:userId/edit', (request, response) => {
     .then((user) => {
       response.render('users/edit', {
         user,
+        siteTitle,
         pageTitle: 'Profile_Update' // later
       })
     })

@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 
-// Creating new Express app
 const app = express()
 
 app.set('view engine', 'hbs')
@@ -21,7 +20,6 @@ app.use(methodOverride('_method'))
 const favicon = require('serve-favicon') // doesn't appear to work?
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
-// Mongo connection set-up
 mongoose.Promise = global.Promise
 mongoose.connect(process.env.MONGODB_URI, {
   useMongoClient: true
@@ -39,18 +37,14 @@ mongoose.connection.on('error', (error) => {
   process.exit(-1)
 })
 
-// Registering controllers
-const users = require('./routes/users')
+const users = require('./controllers/usersController')
 app.use('/users', users)
 
-const landsController = require('./routes/landsController')
-app.use('/users/lands/', landsController) // need to add :wild back
+const lands = require('./controllers/landsController')
+app.use('/users/:userId/lands', lands) 
 
-// my other controllers go here
-
-// Automatically redirect to the Users page on load
 app.get('/', (request, response) => {
   response.redirect('/users')
 })
 
-module.exports = app 
+module.exports = app

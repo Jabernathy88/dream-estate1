@@ -5,11 +5,11 @@ const Home = require('./models/Home')
 
 const mongoose = require('mongoose')
 
- mongoose.connect(process.env.MONGODB_URI, {
-  useMongoClient: true
-})  // turn on if running seeds on Heroku
+// mongoose.connect(process.env.MONGODB_URI, {
+//  useMongoClient: true
+// })  // turn on if running seeds on Heroku
 
-// mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local 
+mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local 
 
 // connect and disconnect
 mongoose.connection.once('open', () => {
@@ -249,16 +249,43 @@ User.remove({}).then(() => {
 }).then((user) => {
   return User.create({
     name: "Jack Black",
-    favColor: 'red'
+    favColor: 'black'
   })
   const landOne = new Land({
-    name: "Lot F001",
+    name: "Lot F005",
     location: "Glengarry, Florida",
     type: "swamp",
     purchased: true
   })
   const homeOne = new Home({
     name: "Jack Black's Shack",
+    type: "log cabin",
+    color: "black",
+    hasGarage: false,
+    hasBigFrontYard: false,
+    purchased: true
+  })
+  landOne.homes.push(homeOne)
+  user.landLots.push(landOne)
+}).then((user) => {
+  console.log(`${user.name} saved to database.`)
+  return user.save()
+
+// Jack Red
+
+}).then((user) => {
+  return User.create({
+    name: "Jack Red",
+    favColor: 'red'
+  })
+  const landOne = new Land({
+    name: "Lot F006",
+    location: "Glengarry, Florida",
+    type: "swamp",
+    purchased: true
+  })
+  const homeOne = new Home({
+    name: `${user.name}'s Shack`,
     type: "log cabin",
     color: "red",
     hasGarage: false,

@@ -1,26 +1,28 @@
 /* */
 body {
-  padding: 4px;
+  padding: 2px;
   font: 16px 'Cousine', 'Roboto', 'Open Sans', monospace;
   background: lightgray;
 }
 
-div.page-content, div.header-content {
-  background: darkgray;
+.title-content {
+  text-align: center;
 }
 
-div.title-content, div.scroll-content {
+
+.title-content, .scroll-content {
   background: lightgreen;
-} /* will divide these up later */
+} 
 
-div.dashboard-content {
+.dashboard-content {
   background: cyan;
-}
+} 
 
 div {
-  padding: 4px;
-  margin: 4px;
-  background: papayawhip;
+  padding: 2px;
+  margin: 2px;
+  background: white;
+  border: 1px solid black; 
 } /* specific divs first, then this one */
 
 .listen:hover, .listen:active {
