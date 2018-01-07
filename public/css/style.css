@@ -86,6 +86,10 @@ div, label {
   border-radius: 8px; 
 } /* specific divs first, then this one */
 
+.avatar-button {
+  margin: 6px;
+}
+
 .listen:hover, .listen:active {
   background: lightgoldenrodyellow;
 } /* highlights anything click-able, on hover */
