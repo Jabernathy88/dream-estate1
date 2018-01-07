@@ -9,14 +9,13 @@ body {
   margin: auto;
   max-width: 700px;
   display: flex;
-  flex-direction: column;
-  align-self: center;
+  flex-direction: column;  
 }
 
 .dashboard-content {
   margin: 8px;
-  padding: 6px;
-  height: 28vh;
+  padding: 6px 6px 10px;
+  height: 35vh;
   background: cyan;
   display: flex;
   flex-direction: column;
@@ -39,7 +38,6 @@ body {
 
 input {
   width: 90%;
-  font-size: 18px; 
   display: inline-block;
   text-align: center;
 }
@@ -59,22 +57,16 @@ a {
   font-weight: 900;
 }
 
+.caption-header {
+  text-align: center;
+}
+
 .caption-details {
   font-variant: small-caps;
 }
 
 .title-content, .scroll-content {
   background: lightgreen;
-} 
-
-.dashboard-content {
-  margin: 8px;
-  padding: 6px 6px 10px;
-  height: 40vh;
-  background: cyan;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 } 
 
 .listen, .home-details {

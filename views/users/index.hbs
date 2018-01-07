@@ -3,7 +3,9 @@
   <div class="game-world">
     <img src="favicon.ico" />
   </div>
-  <p>Welcome! Would you like to ...</p>
+
+  <p class="caption-header">Welcome! Would you like to ...</p>
+
   <a href="/users/new">
     <div class="listen">
       <h3>Create New User ?</h3>
@@ -12,12 +14,15 @@
 </div>
 
 <div class="index-view scroll-content">
-  <p>... or choose a current user:</p>
+
+  <p class="caption-header">... or choose recent users</p>
 
   {{#each users}}
   <a href="/users/{{this._id}}">
     <div class="listen">
-      <p>{{this.name}} | <span class="caption-details">owns {{this.landLots.length}} homes on {{this.landLots.length}} lots</span></p>
+      <p>{{this.name}} |
+        <span class="caption-details">owns {{this.landLots.length}} homes on {{this.landLots.length}} lots</span>
+      </p>
     </div>
   </a>
   {{/each}}

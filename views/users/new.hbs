@@ -1,42 +1,45 @@
 <div class="create-new-view dashboard-content">
-  <div class="dashboard-header">
+  <div class="caption-header">
     <p>Create your avatar</p>
   </div>
 
-  <div class="listen">
-    <form action="/users" method="POST">
+  <form action="/users" method="POST">
+    <label for="name">Name</label>
+    <div class="listen">
       <div class="form-input">
-        <label for="name">Nickname</label>
         <input type="text" name="name" required/>
       </div>
-  </div>
+    </div>
 
-   <div class="listen">
-    <form action="/users" method="POST">
-      <div class="form-input">
+    <div>
+      <form action="/users" method="POST">
         <label for="favColor">Favorite color</label>
+    </div>
+    <div class="listen">
+      <div class="form-input">
         <input type="text" name="favColor" required/>
       </div>
-  </div>
-
-
-  <a href="/">
-    <div class="listen">
-      <p> Save </p>
     </div>
-  </a>
 
-  <a href="/">
-    <div class="listen">
-      <p>Go back to Index.</p>
-    </div>
-  </a>
+    <a href="/">
+      <div class="listen">
+        <p> Save </p>
+      </div>
+    </a>
+
+    <a href="/">
+      <div class="listen">
+        <p>Back to Index.</p>
+      </div>
+    </a>
 
 </div>
-
+<!-- not needed
 <div class="create-new-view scroll-content">
+
   <div class="scroll-header">
     <p>Placeholder</p>
   </div>
 
 </div>
+-->
