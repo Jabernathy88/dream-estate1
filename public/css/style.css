@@ -9,9 +9,13 @@ div.page-content, div.header-content {
   background: darkgray;
 }
 
-div.title-content, div.dashboard-content, div.scroll-content {
+div.title-content, div.scroll-content {
   background: lightgreen;
 } /* will divide these up later */
+
+div.dashboard-content {
+  background: cyan;
+}
 
 div {
   padding: 4px;

@@ -19,6 +19,7 @@ const HomesSchema = new Schema(
 const LandsSchema = new Schema(
   {
     name: { type: String, required: true },
+    location: { type: String, required: true },
     type: { type: String, required: false },
     purchased: { type: Boolean, required: false },
     homes: [HomesSchema]
