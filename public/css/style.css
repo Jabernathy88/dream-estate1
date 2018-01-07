@@ -1,9 +1,36 @@
-/* */
 body {
-  padding: 4px;
+  widows: 100vw;
   font-size: 15px; 
   font-family: 'Encode Sans Expanded', 'Helvetica', 'Arial', sans-serif;
   background: cyan;
+}
+
+.container {
+  margin: auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.dashboard-content {
+  margin: 8px;
+  padding: 6px;
+  height: 28vh;
+  background: cyan;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+} 
+
+.game-world {
+  width: 45px;
+  height: 45px;
+  border: 2px dashed lightgray;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -28,16 +55,6 @@ a {
 .title-content, .scroll-content {
   background: lightgreen;
 } 
-
-.game-world {
-  width: 35px;
-  height: 35px;
-  border: 2px dashed lightgray;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  align-items: center;
-}
 
 .dashboard-content {
   margin: 8px;

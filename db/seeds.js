@@ -5,11 +5,11 @@ const Home = require('./models/Home')
 
 const mongoose = require('mongoose')
 
-// mongoose.connect(process.env.MONGODB_URI, {
-//  useMongoClient: true
-// })  // turn on if running seeds on Heroku
+mongoose.connect(process.env.MONGODB_URI, {
+useMongoClient: true
+})  // turn on if running seeds on Heroku
 
-mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local 
+// mongoose.connect('mongodb://localhost/dreams_db') // turn on if running local 
 
 // connect and disconnect
 mongoose.connection.once('open', () => {
