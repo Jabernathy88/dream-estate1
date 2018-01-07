@@ -14,11 +14,11 @@
   </a>
 </div>
 <div class="user-view scroll-content">
-    <p>Lots owned by {{user.name}}:</p>
+    <p>{{user.name}}'s Lands</p>
   {{#each lands}}
 <a href="/users/{{../userId}}/lands/{{this._id}}">
     <div class="listen">
-      <p>Click for {{this.name}}</p>
+      <p>{{this.name}} <span>| {{this.location}} ({{this.type}}), {{this.homes.length}} homes complete </span></p>
     </div>
 </a>
 

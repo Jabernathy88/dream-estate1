@@ -4,7 +4,7 @@
 
 <div class="lands-view dashboard-content">
   <div>
-    <p>3. {{user.name}}'s' {{land.name}}</p>
+    <p> {{land.name}} (owned by {{user.name}}) </p>
   </div>
   <div class="listen">
     <p>Buy new home.</p>
@@ -17,12 +17,12 @@
 </div>
 
 <div class="user-view scroll-content">
-  <p>Lots owned by {{user.name}}:</p>
+  <p>{{user.name}} has {{homes.length}} homes on this lot</p>
   {{#each homes}}
-  <a href="/users/{{../userId}}/lands/{{landId}}/{{this.id}}">
-    <div class="listen">
-      <p>Click for {{this.name}}</p>
+<!--  <a href="/users/{{../userId}}/lands/{{landId}}/{{this.id}}"> -->
+    <div class="home-details">
+      <p>{{this.name}} <span>| {{this.type}} ({{this.color}}) </span></p>
     </div>
-  </a>
+<!--  </a> -->
   {{/each}}
 </div>
