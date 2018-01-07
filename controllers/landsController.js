@@ -16,7 +16,6 @@ router.get('/:landId', (request, response) => {
         user,
         userId,
         land,
-        landId,
         homes: land.homes,
         siteTitle,
         pageTitle: 'land'

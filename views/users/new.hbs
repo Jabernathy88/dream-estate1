@@ -1,19 +1,30 @@
-<div class="index-view dashboard-content">
-  <div>
-    <p>2. This is Create New page.</p>
+<div class="create-new-view dashboard-content">
+  <div class="dashboard-header">
+    <p>Create your avatar</p>
   </div>
 
   <div class="listen">
     <form action="/users" method="POST">
       <div class="form-input">
-        <label for="name">Username</label>
+        <label for="name">Nickname</label>
         <input type="text" name="name" required/>
       </div>
   </div>
 
-  <div class="listen">
-    <p>What's your favColor?</p>
+   <div class="listen">
+    <form action="/users" method="POST">
+      <div class="form-input">
+        <label for="favColor">Favorite color</label>
+        <input type="text" name="favColor" required/>
+      </div>
   </div>
+
+
+  <a href="/">
+    <div class="listen">
+      <p> Save </p>
+    </div>
+  </a>
 
   <a href="/">
     <div class="listen">
@@ -23,11 +34,9 @@
 
 </div>
 
-<div class="index-view scroll-content">
-  <div>
-    <p>Does not scroll</p>
+<div class="create-new-view scroll-content">
+  <div class="scroll-header">
+    <p>Placeholder</p>
   </div>
-  <div>
-    <p>Does not scroll</p>
-  </div>
+
 </div>
