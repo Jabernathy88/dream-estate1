@@ -1,6 +1,7 @@
 /* */
 body {
-  padding: 2px;
+  padding: 4px;
+  margin: 2px;
   font: 16px 'Cousine', 'Roboto', 'Open Sans', monospace;
   background: lightgray;
 }
