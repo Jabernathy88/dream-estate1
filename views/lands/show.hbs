@@ -16,16 +16,13 @@
   </a>
 </div>
 
-<div class="index-view scroll-content">
-  <a href="/users/lands">
+<div class="user-view scroll-content">
+  <p>Lots owned by {{user.name}}:</p>
+  {{#each homes}}
+  <a href="/users/{{../userId}}/lands/{{landId}}/{{this.id}}">
     <div class="listen">
-      <p>Click to see landLot A34</p>
+      <p>Click for {{this.name}}</p>
     </div>
   </a>
-  <div>
-    <p>landLot F26</p>
-  </div>
-  <div>
-    <p>landLot 3</p>
-  </div>
+  {{/each}}
 </div>

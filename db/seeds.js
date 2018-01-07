@@ -72,7 +72,7 @@ User.remove({}).then(() => {
   suzyUser.landLots.push(landTwo)
   console.log("Suzy saved to database.")
   console.log(`She purchased two lots of land and built three homes:
-  1. Home in Atlanta
+  1. House in Atlanta
   2. Cabin in Florida
   3. Rental in Flordia
   `)

@@ -16,8 +16,11 @@
 <div class="user-view scroll-content">
     <p>Lots owned by {{user.name}}:</p>
   {{#each lands}}
+<a href="/users/{{../userId}}/lands/{{this._id}}">
     <div class="listen">
       <p>Click for {{this.name}}</p>
     </div>
+</a>
+
   {{/each}}
 </div>
