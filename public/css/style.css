@@ -1,13 +1,15 @@
+/* clearing some defaults */
+
 body {
   widows: 100vw;
-  font-size: 16px; 
+  font-size: 14px; 
   font-family: 'Encode Sans Expanded', 'Helvetica', 'Arial', sans-serif;
   background: cyan;
 }
 
 .container {
   margin: auto;
-  max-width: 700px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;  
 }
@@ -15,7 +17,7 @@ body {
 .dashboard-content {
   margin: 8px;
   padding: 6px 6px 10px;
-  height: 40vh;
+  height: 45vh;
   background: cyan;
   display: flex;
   flex-direction: column;
@@ -27,8 +29,8 @@ body {
 }
 
 .sim-content {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border: 2px dashed lightgray;
   display: flex;
   align-self: center;
@@ -41,10 +43,16 @@ body {
   height: 40%;
 }
 
-input {
-  width: 90%;
+form, input {
+  width: 95%;
+  margin: 1px auto;
   display: inline-block;
+  border: none;
   text-align: center;
+}
+
+input {
+  height: 14px;
 }
 
 h1 {
@@ -76,9 +84,11 @@ p.caption-header {
   background: lightgreen;
 } 
 
-.listen, .home-details {
+.listen, .home-details, .avatar-button {
   background: azure;
 }
+
+
 
 div, label {
   padding: 2px 4px;
@@ -90,6 +100,17 @@ div, label {
   margin: 6px;
 }
 
-.listen:hover, .listen:active {
+.avatar-submit {
+  height: 55px;
+  color: #0000EE;
+  background-color: rgba(240, 255, 255, 0);
+  font-size: 1.17em;
+  font-family: 'Merienda', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 900;
+  display: block;
+  
+}
+
+.listen:hover, .listen:active, .avatar-button:hover, .avatar-button:active {
   background: lightgoldenrodyellow;
 } /* highlights anything click-able, on hover */
