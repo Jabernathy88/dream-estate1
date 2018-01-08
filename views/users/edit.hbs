@@ -1,38 +1,51 @@
 <!--note: this page both Edits && Deletes -->
-<div class="index-view dashboard-content">
-  <div>
-    <p>4. Edit/Delete {{user.name}}.</p>
-  </div>
+<div class="create-new-view">
 
   <form action="/users/{{user._id}}?_method=PUT" method="POST">
-    <div class="listen">
-      <label for="name">Change my name?</label>
-      <p>
-        <input type="text" name="name" value="{{user.name}}" required />
-      </p>
+
+    <div class="index-view dashboard-content">
+
+      <p class="caption-header">Edit / delete {{user.name}}</p>
+
+      <label for="name">Name</label>
+      <div class="listen">
+        <div class="form-input">
+          <input type="text" name="name" value="{{user.name}}" required />
+        </div>
+      </div>
+
+      <label for="name">Favorite Color</label>
+      <div class="listen">
+        <div class="form-input">
+          <input type="text" name="name" value="{{user.favColor}}" required />
+        </div>
+      </div>
+
     </div>
-    <div class="listen">
-      <p>Change my favColor?</p>
+
+    <div class="scroll-content">
+
+      <p class="caption-header">Like these changes?</p>
+
+      <div class="avatar-button">
+        <input class="avatar-submit" type="submit" value="Save">
+      </div>
+      
+      <a href="/users/{{user._id}}/delete">
+      <div class="avatar-button">
+          <h3>Delete {{user.name}}?</h3>
+        </div>
+      </a>
+
+      <a href="/users/{{user._id}}">
+      <div class="avatar-button">
+          <h3>Cancel / go back</h3>
+        </div>
+      </a>
+
     </div>
+
+
   </form>
 
-  <a href="/users/{{user._id}}/delete">
-    <div class="listen">
-      <p>Delete {{user.name}}?</p>
-    </div>
-  </a>
-  <a href="/users/{{user._id}}">
-    <div class="listen">
-      <p>Go back to Suzy's page.</p>
-    </div>
-  </a>
-</div>
-
-<div class="index-view scroll-content">
-  <div>
-    <p>Does not scroll</p>
-  </div>
-  <div>
-    <p>Does not scroll</p>
-  </div>
 </div>

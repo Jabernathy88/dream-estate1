@@ -5,27 +5,6 @@ const Land = require('../db/models/Land')
 const Home = require('../db/models/Home')
 const siteTitle = require('../title')
 
-router.get('/:landId', (request, response) => {
-  const userId = request.params.userId
-  const landId = request.params.landId
-
-  User.findById(userId)
-    .then((user) => {
-      const land = user.landLots.id(landId)
-      response.render('lands/show', {
-        user,
-        userId,
-        land,
-        homes: land.homes,
-        siteTitle,
-        pageTitle: 'land'
-      })
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-})
-
 router.get('/new', (request, response) => {
   const userId = request.params.userId
 
@@ -36,7 +15,7 @@ router.get('/new', (request, response) => {
   })
 })
 
-router.get('/:storeId', (request, response) => {
+router.get('/:landId', (request, response) => {
   const userId = request.params.userId
   const landId = request.params.landId
 
@@ -54,6 +33,26 @@ router.get('/:storeId', (request, response) => {
     })
 })
 
+router.get('/:landId', (request, response) => {
+  const userId = request.params.userId
+  const landId = request.params.landId
+
+  User.findById(userId)
+    .then((user) => {
+      const land = user.landLots.id(landId)
+      response.render('lands/show', {
+        user,
+        userId,
+        land,
+        siteTitle,
+        pageTitle: 'land'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
 router.post('/', (request, response) => {
   const userId = request.params.userId
   const newLand = request.body
@@ -64,7 +63,7 @@ router.post('/', (request, response) => {
       return user.save()
     })
     .then(() => {
-      response.redirect(`/users/${userId}`)
+      response.redirect(`/users/${userId}/lands`)
     })
     .catch((error) => {
       console.log(error)

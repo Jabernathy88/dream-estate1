@@ -1,6 +1,6 @@
 <div class="create-new-view">
 
-  <form action="/users" method="POST">
+  <form action="/users/{{userId}}/lands" method="POST">
 
     <div class="create-new-view dashboard-content">
 
@@ -21,31 +21,42 @@
 
       <div>
         <form action="/users" method="POST">
-          <label for="favColor">Favorite color</label>
+          <label for="location">Location</label>
       </div>
       <div class="listen">
         <div class="form-input">
-          <input type="text" name="favColor" />
+          <input type="text" name="location" />
         </div>
+      </div>
+    </div>
+
+    <div>
+      <form action="/users" method="POST">
+        <label for="type">Type</label>
+    </div>
+    <div class="listen">
+      <div class="form-input">
+        <input type="text" name="type" />
       </div>
     </div>
 
     <div class="scroll-content">
 
-      <p class="caption-header">Ready to start?</p>
+      <p class="caption-header">Ready to buy?</p>
 
       <div class="avatar-button">
-        <input class="avatar-submit" type="submit" value="Save">
+        <input class="avatar-submit" type="submit" value="Saved">
       </div>
 
 
-      <a href="/">
+      <a href="/users/{{userId}}">
         <div class="listen avatar-button">
           <h3>Cancel / go back</h3>
         </div>
       </a>
-
+      
     </div>
+
 </div>
 </form>
 
