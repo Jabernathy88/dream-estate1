@@ -1,26 +1,49 @@
 <div class="user-view dashboard-content">
-  
-    <p>3. This is {{user.name}}'s page.</p>
 
-  <a href="/users/{{user._id}}/edit">
-    <div class="listen">
-      <p>Edit or Delete {{user.name}}.</p>
+  <nav>
+    <a href="/">
+      <div class="listen game-nav-left">
+        <h4>Back to home</h4>
+      </div>
+    </a>
+
+    <a href="/users/{{user._id}}/edit">
+      <div class="listen game-nav-right">
+        <h4>Edit / delete user</h4>
+      </div>
+    </a>
+  </nav>
+
+  <p class="caption-header">Hello {{user.name}}!</p>
+
+
+  <div class="sim-content">
+    <div class="sim-placeholder">
+
     </div>
-  </a>
-  <a href="/">
+  </div>
+
+  <p class="caption-header">Would you like to buy some land?</p>
+
+  <a href="/users/{{userId}}/lands/new">
     <div class="listen">
-      <p>Back to Index.</p>
+      <h3>Buy land!</h3>
     </div>
   </a>
 </div>
+
+</div>
+
 <div class="user-view scroll-content">
-    <p>{{user.name}}'s Lands</p>
+  <p class="caption-header">Your current lands</p>
   {{#each lands}}
-<a href="/users/{{../userId}}/lands/{{this._id}}">
+  <a href="/users/{{../userId}}/lands/{{this._id}}">
     <div class="listen">
-      <p>{{this.name}} <span>| {{this.location}} ({{this.type}}), {{this.homes.length}} homes complete </span></p>
+      <p>{{this.name}}
+        <span>| {{this.location}} ({{this.type}}), {{this.homes.length}} homes complete </span>
+      </p>
     </div>
-</a>
+  </a>
 
   {{/each}}
 </div>

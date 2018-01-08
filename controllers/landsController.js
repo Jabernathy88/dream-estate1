@@ -26,4 +26,50 @@ router.get('/:landId', (request, response) => {
     })
 })
 
+router.get('/new', (request, response) => {
+  const userId = request.params.userId
+
+  response.render('lands/new', {
+    userId,
+    siteTitle,
+    pageTitle: 'New Land'
+  })
+})
+
+router.get('/:storeId', (request, response) => {
+  const userId = request.params.userId
+  const landId = request.params.landId
+
+  User.findById(userId)
+    .then((user) => {
+      const land = user.lands.id(landId)
+      response.render('lands/show', {
+        userId,
+        land,
+        pageTitle: 'Land'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
+router.post('/', (request, response) => {
+  const userId = request.params.userId
+  const newLand = request.body
+
+  User.findById(userId)
+    .then((user) => {
+      user.landLots.push(newLand)
+      return user.save()
+    })
+    .then(() => {
+      response.redirect(`/users/${userId}`)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+
+})
+
 module.exports = router

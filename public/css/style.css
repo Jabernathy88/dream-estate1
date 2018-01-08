@@ -17,7 +17,7 @@ body {
 .dashboard-content {
   margin: 8px;
   padding: 6px 6px 10px;
-  height: 45vh;
+  height: 40vh;
   background: cyan;
   display: flex;
   flex-direction: column;
@@ -26,6 +26,25 @@ body {
 
 .title-content {
   height: 70px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-nav-left, .game-nav-right {
+  width: 130px;
+  text-align: center;
+}
+
+.game-nav-left {
+
+}
+
+.game-nav-right {
+
 }
 
 .sim-content {
@@ -65,6 +84,11 @@ h1, h2, h3, h4, h5 {
   font-weight: 900;
 }
 
+h4 {
+  display: inline;
+  text-align: unset;
+}
+
 a {
   text-decoration: none;
   font-weight: 900;
@@ -87,8 +111,6 @@ p.caption-header {
 .listen, .home-details, .avatar-button {
   background: azure;
 }
-
-
 
 div, label {
   padding: 2px 4px;
