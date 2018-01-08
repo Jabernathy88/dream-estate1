@@ -5,6 +5,23 @@ const Land = require('../db/models/Land')
 const Home = require('../db/models/Home')
 const siteTitle = require('../title')
 
+router.get('/', (request, response) => {
+  const userId = request.params.userId
+
+  User.findById(userId)
+    .then((user) => {
+      response.render('lands/index', {
+        userFullName: `${user.firstName} ${user.lastName}`,
+        userId: user._id,
+        lands: user.lands,
+        pageTitle: 'lands'
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+})
+
 router.get('/new', (request, response) => {
   const userId = request.params.userId
 
@@ -21,7 +38,7 @@ router.get('/:landId', (request, response) => {
 
   User.findById(userId)
     .then((user) => {
-      const land = user.lands.id(landId)
+      const land = user.landLots.id(landId)
       response.render('lands/show', {
         userId,
         land,
