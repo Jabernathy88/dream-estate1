@@ -43,6 +43,7 @@ router.get('/:landId', (request, response) => {
         user,
         userId,
         land,
+        landId,
         siteTitle,
         pageTitle: 'Land'
       })
