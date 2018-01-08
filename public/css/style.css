@@ -107,8 +107,7 @@ p.caption-header {
 .title-content, .scroll-content {
   width: 490px;
   background: lightgreen;
-  display: flex;
-  flex-direction: column;
+
 } 
 
 .listen, .home-details, .avatar-button {
