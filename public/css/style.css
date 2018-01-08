@@ -110,7 +110,7 @@ p.caption-header {
   font-variant: small-caps;
 }
 
-.listen, .home-details, .avatar-button {
+.listen, .homes-details, .avatar-button {
   background: azure;
 }
 
@@ -122,6 +122,15 @@ div, label {
 
 .avatar-button {
   margin: 6px;
+}
+
+.homes-header {
+  font-size: 1.17em;
+}
+
+img.bullet-icon {
+  height: 12px;
+  display: inline;
 }
 
 .avatar-submit {

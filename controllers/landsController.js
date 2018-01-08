@@ -40,8 +40,10 @@ router.get('/:landId', (request, response) => {
     .then((user) => {
       const land = user.landLots.id(landId)
       response.render('lands/show', {
+        user,
         userId,
         land,
+        siteTitle,
         pageTitle: 'Land'
       })
     })

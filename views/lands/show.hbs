@@ -1,28 +1,48 @@
-<!-- later
-  <form action="/users/{{userId}}/lands/{{land._id}}/homes" method="POST">
--->
-
 <div class="lands-view dashboard-content">
-  <div>
-    <p> {{land.name}} (owned by {{user.name}}) </p>
+  <nav>
+    <a href="/">
+      <div class="listen game-nav-left">
+        <h4>Back to home</h4>
+      </div>
+    </a>
+
+    <a href="/users/{{user._id}}/edit">
+      <div class="listen game-nav-right">
+        <h4>Edit / delete user</h4>
+      </div>
+    </a>
+  </nav>
+
+  <p class="caption-header">Welcome to {{land.name}}</p>
+
+  <div class="sim-content">
+    <div class="sim-placeholder">
+
+    </div>
   </div>
-  <div class="listen">
-    <p>Buy new home.</p>
-  </div>
-  <a href="/">
+
+  <p class="caption-header">Would you like to buy something here?</p>
+
+  <a href="/users/{{userId}}/lands/new">
     <div class="listen">
-      <p>Back to Index.</p>
+      <h3>Build home!</h3>
     </div>
   </a>
 </div>
 
 <div class="user-view scroll-content">
-  <p>{{user.name}} has {{homes.length}} homes on this lot</p>
+  <p class="caption-header">{{user.name}} has {{land.homes.length}} homes on this lot</p>
   {{#each land.homes}}
-<!--  <a href="/users/{{../userId}}/lands/{{landId}}/{{this.id}}"> -->
-    <div class="home-details">
-      <p>{{this.name}} <span>| {{this.type}} ({{this.color}}) </span></p>
-    </div>
-<!--  </a> -->
+  <!--  <a href="/users/{{../userId}}/lands/{{landId}}/{{this.id}}"> -->
+  <div class="homes-details">
+    <p class="homes-header"><img class="bullet-icon" src="/../favicon.ico"> {{this.name}}:</p>
+    
+    <ul>
+      <li>Type : {{this.type}} </li>
+      <li>Color: {{this.color}}</li>
+    </ul>
+
+  </div>
+  <!--  </a> -->
   {{/each}}
 </div>
