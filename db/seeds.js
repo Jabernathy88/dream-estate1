@@ -118,8 +118,6 @@ User.remove({}).then(() => {
   console.log(`${user.name} saved to database.`)
   return user.save()
 
-/*  not needed for now
-
 // 3. Sammy the Cat
 
 }).then(() => {
@@ -175,7 +173,7 @@ User.remove({}).then(() => {
   landThree.homes.push(homeThree)
   user.landLots.push(landOne, landTwo, landThree)
   console.log(`${user.name} saved to database.`)
-  return user.save() */
+  return user.save() 
 
   // 4. Kanye the Giant
 
