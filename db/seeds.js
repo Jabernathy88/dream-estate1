@@ -186,14 +186,14 @@ User.remove({}).then(() => {
   })
 }).then((user) => {
   const landOne = new Land({
-    name: "Lot A004",
-    location: "Midtown Atlanta",
-    type: "urban-ish",
+    name: "Lot F012",
+    location: "Glengarry, Florida",
+    type: "swamp",
     purchased: true
   })
   const homeOne = new Home({
-    name: "Big House",
-    type: "skyscraper",
+    name: "Thug Manor",
+    type: "floating castle in the sky",
     color: "maroon",
     hasGarage: false,
     hasBigFrontYard: false,
