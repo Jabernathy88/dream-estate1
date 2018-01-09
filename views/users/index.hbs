@@ -1,4 +1,4 @@
-<div class="index-view dashboard-content">
+<main>
 
   <div class="sim-content">
     <div class="sim-placeholder">
@@ -13,9 +13,9 @@
       <h3>Start new game</h3>
     </div>
   </a>
-</div>
+</main>
 
-<div class="index-view scroll-content">
+<section>
 
   <p class="caption-header">or choose recent user</p>
 
@@ -23,11 +23,10 @@
   <a href="/users/{{this._id}}">
     <div class="listen">
       <p>{{this.name}} |
-        <span class="caption-details">owns 
-         {{this.landLots.length}} lands</span>
+        <span class="caption-details">owns {{this.landLots.length}} lands</span>
       </p>
     </div>
   </a>
   {{/each}}
 
-</div>
+</section>
