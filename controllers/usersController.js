@@ -13,10 +13,8 @@ router.get('/', (request, response) => {
 
   User.find({})
     .then((users) => {
-
       response.render('users/index', {
         users,
-        countHomes,
         siteTitle
       })
     })
