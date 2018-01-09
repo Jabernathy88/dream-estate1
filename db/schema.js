@@ -35,7 +35,7 @@ const UserSchema = new Schema(
     name: { type: String, required: true },
     favColor: { type: String, required: false },
     landLots: [LandsSchema]
-  },
+    },
   {
     timestamps: {},
     usePushEach: true

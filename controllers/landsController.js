@@ -13,7 +13,7 @@ router.get('/', (request, response) => {
       response.render('lands/index', {
         userFullName: `${user.firstName} ${user.lastName}`,
         userId: user._id,
-        lands: user.lands,
+        lands: user.landLots,
         pageTitle: 'lands'
       })
     })

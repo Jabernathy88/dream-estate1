@@ -7,10 +7,16 @@ const siteTitle = require('../title')
 
 // show index view
 router.get('/', (request, response) => {
+  const countHomes = function(user) {
+    return user.landLots.homes.length
+  }
+
   User.find({})
     .then((users) => {
+
       response.render('users/index', {
         users,
+        countHomes,
         siteTitle
       })
     })

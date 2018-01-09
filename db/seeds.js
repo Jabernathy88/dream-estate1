@@ -57,12 +57,12 @@ User.remove({}).then(() => {
     hasBigFrontYard: false,
     purchased: true
   })
-  const homeThree = new Home({ // here
+  const homeThree = new Home({ 
     name: "Cheap Rental Income",
     type: "shotgun house",
     color: "magenta",
-    hasGarage: true,
-    hasBigFrontYard: false,
+    hasGarage: false,
+    hasBigFrontYard: true,
     purchased: true
   })
   const landThree = new Land({
@@ -71,7 +71,7 @@ User.remove({}).then(() => {
     type: "swamp",
     purchased: true
   })
-  const homeFour = new Home({ // here
+  const homeFour = new Home({ 
     name: "Suzy's Disco Palace",
     type: "skyscraper",
     color: "emerald",
@@ -80,14 +80,15 @@ User.remove({}).then(() => {
     purchased: true
   })
   landOne.homes.push(homeOne)
-  landTwo.homes.push(homeTwo, homeThree)
-  landThree.homes.push(homeFour)
+  landTwo.homes.push(homeTwo)
+  landThree.homes.push(homeThree, homeFour)
   suzyUser.landLots.push(landOne, landTwo, landThree)
   console.log("Suzy saved to database.")
   console.log(`She purchased two lots of land and built three homes:
   1. House in Atlanta
-  2. Cabin in Florida
+  2. Cabin in Blue Ridge, GA
   3. Rental in Flordia
+  4. Skyscraper in Florida
   `)
   return suzyUser.save()
 
