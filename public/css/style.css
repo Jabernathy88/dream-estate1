@@ -4,7 +4,7 @@ body {
   widows: 100vw;
   font-size: 14px; 
   font-family: 'Encode Sans Expanded', 'Helvetica', 'Arial', sans-serif;
-  background: cyan;
+  background: rgb(120,255,255);
 }
 
 .container {
@@ -15,10 +15,10 @@ body {
 }
 
 .dashboard-content {
-  margin: 8px;
-  padding: 6px 6px 10px 6px;
+  margin: 4px;
+  padding: 4px;
   height: 40vh;
-  background: cyan;
+  background: rgb(120,255,255);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -27,7 +27,7 @@ body {
 .title-content, .scroll-content {
   margin: 2px auto;
   width: 98%;
-  background: lightgreen;
+  background: rgb(161,230,150);
 } 
 
 .title-content {
@@ -45,14 +45,6 @@ nav {
   text-align: center;
 }
 
-.game-nav-left {
-
-}
-
-.game-nav-right {
-
-}
-
 .sim-content {
   width: 70px;
   height: 70px;
@@ -66,6 +58,18 @@ nav {
 .sim-placeholder {
   width: 40%;
   height: 40%;
+}
+
+div, label {
+  padding: 4px;
+  margin: 2px;
+  border-radius: 8px; 
+} 
+
+.listen, .homes-content, .avatar-button {
+  margin: 4px;
+  background: azure; 
+  border: 2px solid rgba(240,200,240,.6)
 }
 
 form, input {
@@ -110,23 +114,20 @@ p.caption-header {
   font-variant: small-caps;
 }
 
-.listen, .homes-details, .avatar-button {
-  background: azure;
-}
-
-div, label {
-  padding: 2px 4px;
-  margin: 2px;
-  border-radius: 8px; 
-} /* specific divs first, then this one */
-
 .avatar-button {
   margin: 6px;
 }
 
 .homes-header {
+  margin: 4px auto;
+  width: 95%;
   font-size: 1.17em;
-  border-bottom: 2px dashed rgba(0,0,0,0.25);
+  border-bottom: 2px dashed rgba(0,0,0,.25);
+}
+
+ul {
+  margin: 4px;
+  padding 4px;
 }
 
 img.bullet-icon {
@@ -142,9 +143,12 @@ img.bullet-icon {
   font-family: 'Merienda', 'Helvetica', 'Arial', sans-serif;
   font-weight: 900;
   display: block;
-  
+}
+
+.new-home-view, .new-land-view {
+  height: 50vh;
 }
 
 .listen:hover, .listen:active, .avatar-button:hover, .avatar-button:active {
-  background: lightgoldenrodyellow;
-} /* highlights anything click-able, on hover */
+  background: rgb(250,245,220); 
+} 

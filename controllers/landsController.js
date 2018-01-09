@@ -83,7 +83,7 @@ router.post('/', (request, response) => {
       return user.save()
     })
     .then(() => {
-      response.redirect(`/users/${userId}/lands`)
+      response.redirect(`/users/${userId}`)
     })
     .catch((error) => {
       console.log(error)

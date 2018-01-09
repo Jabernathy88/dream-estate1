@@ -32,7 +32,7 @@ User.remove({}).then(() => {
   const landOne = new Land({
     name: "Lot A001",
     location: "Midtown Atlanta",
-    type: "urban",
+    type: "urban-ish",
     purchased: true
   })
   const homeOne = new Home({ // here
@@ -46,7 +46,7 @@ User.remove({}).then(() => {
   const landTwo = new Land({
     name: "Lot B001",
     location: "Blue Ridge, Georgia",
-    type: "urban",
+    type: "mountains",
     purchased: true
   })
   const homeTwo = new Home({ // here
@@ -65,11 +65,24 @@ User.remove({}).then(() => {
     hasBigFrontYard: false,
     purchased: true
   })
+  const landThree = new Land({
+    name: "Lot F011",
+    location: "Glengarry, Florida",
+    type: "swamp",
+    purchased: true
+  })
+  const homeFour = new Home({ // here
+    name: "Suzy's Disco Palace",
+    type: "skyscraper",
+    color: "emerald",
+    hasGarage: true,
+    hasBigFrontYard: false,
+    purchased: true
+  })
   landOne.homes.push(homeOne)
-  landTwo.homes.push(homeTwo)
-  landTwo.homes.push(homeThree)
-  suzyUser.landLots.push(landOne)
-  suzyUser.landLots.push(landTwo)
+  landTwo.homes.push(homeTwo, homeThree)
+  landThree.homes.push(homeFour)
+  suzyUser.landLots.push(landOne, landTwo, landThree)
   console.log("Suzy saved to database.")
   console.log(`She purchased two lots of land and built three homes:
   1. House in Atlanta
@@ -88,7 +101,7 @@ User.remove({}).then(() => {
   const landOne = new Land({
     name: "Lot A002",
     location: "Midtown Atlanta",
-    type: "urban",
+    type: "urban-ish",
     purchased: true
   })
   const homeOne = new Home({
@@ -129,7 +142,7 @@ User.remove({}).then(() => {
   const landTwo = new Land({
     name: "Lot A003",
     location: "Midtown Atlanta",
-    type: "urban",
+    type: "urban-ish",
     purchased: true
   })
   const homeTwo = new Home({ // here
@@ -172,7 +185,7 @@ User.remove({}).then(() => {
   const landOne = new Land({
     name: "Lot A004",
     location: "Midtown Atlanta",
-    type: "urban",
+    type: "urban-ish",
     purchased: true
   })
   const homeOne = new Home({
@@ -199,7 +212,7 @@ User.remove({}).then(() => {
   const landOne = new Land({
     name: "Lot A005",
     location: "Midtown Atlanta",
-    type: "urban",
+    type: "urban-ish",
     purchased: true
   })
   const homeOne = new Home({

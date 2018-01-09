@@ -3,7 +3,7 @@
   <nav>
     <a href="/">
       <div class="listen game-nav-left">
-        <h4>Back to home</h4>
+        <h4>Go back</h4>
       </div>
     </a>
 
@@ -34,7 +34,7 @@
 
 <div class="user-view scroll-content">
 
-  <p class="caption-header">Your current lands</p>
+  <p class="caption-header">Your have {{user.landLots.length}} lands</p>
   {{#each lands}}
   <a href="/users/{{../userId}}/lands/{{this._id}}">
     <div class="listen">
@@ -43,6 +43,11 @@
       </p>
     </div>
   </a>
-
   {{/each}}
+
+  <a href="/">
+    <div class="listen avatar-button">
+      <h3>Cancel / go back</h3>
+    </div>
+
 </div>

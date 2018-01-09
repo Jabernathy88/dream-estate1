@@ -1,8 +1,8 @@
-<div class="create-new-view">
+<div>
 
-  <form action="/users/{{userId}}/lands" method="POST">
+  <form action="/users/{{userId}}/lands/{{landId}}/homes" method="POST">
 
-    <div class="create-new-view dashboard-content">
+    <div class="new-home-view dashboard-content">
 
       <nav>
         <a href="/users/{{userId}}">
@@ -20,7 +20,7 @@
         </a> -->
       </nav>
 
-      <p class="caption-header">What kind of land?</p>
+      <p class="caption-header">What kind of home?</p>
 
       <label for="name">Name</label>
       <div class="listen">
@@ -30,20 +30,20 @@
       </div>
 
       <div>
-        <label for="location">Location</label>
-      </div>
-      <div class="listen">
-        <div class="form-input">
-          <input type="text" name="location" />
-        </div>
-      </div>
-
-      <div>
         <label for="type">Type</label>
       </div>
       <div class="listen">
         <div class="form-input">
           <input type="text" name="type" />
+        </div>
+      </div>
+
+      <div>
+        <label for="color">Color</label>
+      </div>
+      <div class="listen">
+        <div class="form-input">
+          <input type="text" name="color" />
         </div>
       </div>
 
