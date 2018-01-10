@@ -6,10 +6,10 @@ body {
 
 #container{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2fr 3fr 3fr 2fr);
         grid-auto-rows: minmax(100px, auto);
         grid-gap: 4px;
-        max-width: 960px;
+        max-width: 760px;
         margin: 0 auto;
         grid-template-areas:
             "header header header header"
@@ -20,7 +20,7 @@ body {
             "section section section section";
     }
     /* desktop grid */
-    @media screen and (min-width: 760px){
+    @media screen and (min-width: 560px){
     #container{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -33,12 +33,13 @@ body {
                 "aside nav nav right"
                 "aside main main right"
                 "aside main main right"
+                "aside main main right"
                 "aside section section right"
                 "aside section section right";
     }
     }
 #container > *{
-  padding: 30px;
+  padding: 20px;
 }
     header{
         grid-area: header;
@@ -61,5 +62,35 @@ body {
 
 header, section {
   background: rgb(161,230,150);
-
+  border-radius: 8px; 
 }
+
+header, main {
+  text-align: center;
+}
+
+div {
+  border-radius: 8px; 
+}
+
+.sim-content {
+  width: 40px;
+  height: 40px;
+  border: 4px dashed rgba(0,0,0,.25);
+  margin: 2px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sim-placeholder {
+  width: 40%;
+  height: 40%;
+}
+
+.listen, .homes-content, .avatar-button {
+  margin: 2px auto;
+  background: azure; 
+  border: 2px solid rgba(240,200,240,.6)
+}
+
