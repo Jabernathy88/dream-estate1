@@ -4,28 +4,23 @@
 
 Started: 01-03-18, Re-started: 01-04-18, **Due:** Monday 01-08-18
 
-### First-day checklist
-
-Needed before I start:
-
-1. Deploy to Heroku _done
-2. ERD with 3 data models __done
-3. Restful route for 1 model: GET, POST, PUT, and DELETE __done
-4. Mongoose installed and database created, connected __done
-5. Wireframes __done
-6. Trello board with User Stories __done
-
-Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/projects/unit_02).
-
-## Project Description & Goals
-
-Now this project is called DreamEstate Tycoon. Basically you create a user, choose some land you want (or several lots of land), and choose what kind of home you want to build (or many homes). It will be somewhat cartoon-ish, but clever. And possibly, it could later evolve into a more realistic real-estate simulator.
-
 ## Link to Heroku
 
 My deployed app here: [DreamEstate app](https://arcane-caverns-60948.herokuapp.com/). 
 
-**-- Note:** Heroku reported down around 2:30pm Thurs.
+## Project Description, Goals & Self-Review
+
+Welcome to Dream Home Tycoon. Basically you create a user, choose some land you want (or several lots of land), and choose what kind of home you want to build (or many homes). It will be somewhat cartoon-ish, but clever. And possibly, it could later evolve into a more realistic real-estate simulator. 
+
+Link to grading rubric here: [Project 2 Outline](https://git.generalassemb.ly/atl-wdi/wdi-curriculum/tree/master/projects/unit_02).
+
+**Technologies used:** HTML5, CSS (Flexbox, but not Grid), JavaScript, jQuery, Node.js, Express.js, MongoDB.js, Mongoose, Handlebars
+
+**My approach:** Working from the ERD and Wireframes was very useful. I was able to scrap my first idea, for good logistic reasons, but then I suffered from some "analysis paralysis" sketching out my second idea. I tended to overthink things, but the planning definitely helped keep regain focus. 
+
+**Unsolved problems:** The website looks a little too basic. There needs to be more graphics. Also, I did not have time to implement as many custom options for Users (such a way do neatly display if their "lands" were urban or swampy, or if their homes were single story or taller). 
+
+**Next version:** I have many ideas, but I think these unique options would be the first step. After that the extra "bling" I mentioned in my presentation such as resource tokens, etc. 
 
 ## ERDs
 
@@ -86,7 +81,7 @@ console.log(exampleUsers)
 
 ## Wireframes
 
-Sorry -- I will upload a more professional-looking wireframe soon.
+Sorry if the image looks a little rough.
 
 Views and routes sketch:
 
@@ -94,14 +89,8 @@ Views and routes sketch:
 
 ## User Stories
 
-Link to my Trello board here: [Project 2 Planning](https://trello.com/b/lb8Tv2XL/dream-estate1-project-2). Still updating!
+Link to my Trello board here: [Project 2 Planning](https://trello.com/b/lb8Tv2XL/dream-estate1-project-2). 
 
-## Reach/Icebox
-
-More about these later. 
-
-## End
-
-I'm back to work!
+That's it. Thanks so much for your feedback!
 
 -JA
