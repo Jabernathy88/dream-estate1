@@ -1,70 +1,66 @@
-<div>
+<form action="/users/{{userId}}/lands/{{landId}}/homes" method="POST">
 
-  <form action="/users/{{userId}}/lands/{{landId}}/homes" method="POST">
+  <div class="new-home-view dashboard-content">
 
-    <div class="new-home-view dashboard-content">
+    <nav>
+      <a href="/users/{{userId}}">
+        <div class="listen game-nav-left">
+          <h4>Cancel / go back</h4>
+        </div>
+      </a>
 
-      <nav>
-        <a href="/users/{{userId}}">
-          <div class="listen game-nav-left">
-            <h4>Cancel / go back</h4>
-          </div>
-        </a>
+      <div></div>
 
-        <div></div>
-
-        <!--        <a href="/">
+      <!--        <a href="/">
           <div class="listen game-nav-left">
             <h4>Back to index</h4>
           </div>
         </a> -->
-      </nav>
+    </nav>
 
-      <p class="caption-header">What kind of home?</p>
+    <p class="caption-header">What kind of home?</p>
 
-      <label for="name">Name</label>
-      <div class="listen">
-        <div class="form-input">
-          <input type="text" name="name" required/>
-        </div>
+    <label for="name">Name</label>
+    <div class="listen">
+      <div class="form-input">
+        <input type="text" name="name" required/>
       </div>
-
-      <div>
-        <label for="type">Type</label>
-      </div>
-      <div class="listen">
-        <div class="form-input">
-          <input type="text" name="type" />
-        </div>
-      </div>
-
-      <div>
-        <label for="color">Color</label>
-      </div>
-      <div class="listen">
-        <div class="form-input">
-          <input type="text" name="color" />
-        </div>
-      </div>
-
     </div>
 
-    <div class="scroll-content">
-
-      <p class="caption-header">Ready to buy?</p>
-
-      <div class="avatar-button">
-        <input class="avatar-submit" type="submit" value="Save">
+    <div>
+      <label for="type">Type</label>
+    </div>
+    <div class="listen">
+      <div class="form-input">
+        <input type="text" name="type" />
       </div>
-
-      <a href="/users/{{userId}}">
-        <div class="listen avatar-button">
-          <h3>Cancel / go back</h3>
-        </div>
-      </a>
-
     </div>
 
-  </form>
+    <div>
+      <label for="color">Color</label>
+    </div>
+    <div class="listen">
+      <div class="form-input">
+        <input type="text" name="color" />
+      </div>
+    </div>
 
-</div>
+  </div>
+
+  <div class="scroll-content">
+
+    <p class="caption-header">Ready to buy?</p>
+
+    <div class="avatar-button">
+      <input class="avatar-submit" type="submit" value="Save">
+    </div>
+
+    <a href="/users/{{userId}}">
+      <div class="listen avatar-button">
+        <h3>Cancel / go back</h3>
+      </div>
+    </a>
+
+  </div>
+
+</form>

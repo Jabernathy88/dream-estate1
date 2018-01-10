@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
-const favicon = require('serve-favicon') 
+const favicon = require('serve-favicon')
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 mongoose.Promise = global.Promise
@@ -41,7 +41,7 @@ const users = require('./controllers/usersController')
 app.use('/users', users)
 
 const lands = require('./controllers/landsController')
-app.use('/users/:userId/lands', lands) 
+app.use('/users/:userId/lands', lands)
 
 const homes = require('./controllers/homesController')
 app.use('/users/:userId/lands/:landId/homes', homes)
